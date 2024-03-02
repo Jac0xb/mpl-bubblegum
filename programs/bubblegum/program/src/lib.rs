@@ -176,19 +176,6 @@ pub mod bubblegum {
     }
 
     /// Sets the `decompressible_state` of a tree.
-    #[deprecated(
-        since = "0.11.1",
-        note = "Please use `set_decompressible_state` instead"
-    )]
-    pub fn set_decompressable_state(
-        ctx: Context<SetDecompressibleState>,
-        decompressable_state: DecompressibleState,
-    ) -> Result<()> {
-        msg!("Deprecated: please use `set_decompressible_state` instead");
-        processor::set_decompressible_state(ctx, decompressable_state)
-    }
-
-    /// Sets the `decompressible_state` of a tree.
     pub fn set_decompressible_state(
         ctx: Context<SetDecompressibleState>,
         decompressable_state: DecompressibleState,
